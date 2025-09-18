@@ -1,3 +1,5 @@
+#En este ejercicio hice el ejercicio normal, pero quería que tuviera una mejor implementación
+#se le añade recursividad para que el código se vea mas completo
 defmodule Punto1 do
   def main do
     # Se solicita al usuario el peso del paquete
@@ -42,7 +44,7 @@ defmodule Punto1 do
   # Si no es válido, vuelve a pedirlo
   def validar_peso(_, mensaje) do
     Util.mostrar_error("El peso debe ser positivo")
-    ingresar_peso(mensaje)
+    ingresar_peso(mensaje)#aplico recursividad
   end
 
   # Pide el tipo de cliente y valida con pattern matching
@@ -53,7 +55,7 @@ defmodule Punto1 do
       3 -> :regular
       _ ->
         Util.mostrar_error("Tipo de cliente inválido")
-        ingresar_tipo(mensaje)
+        ingresar_tipo(mensaje)#aplico recursividad
     end
   end
 
@@ -64,7 +66,7 @@ defmodule Punto1 do
       2 -> :estandar
       _ ->
         Util.mostrar_error("Servicio del paquete inválido")
-        ingresar_servicio(mensaje)
+        ingresar_servicio(mensaje)#aplico recursividad
     end
   end
 
