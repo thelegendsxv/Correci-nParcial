@@ -1,3 +1,5 @@
+#En este ejercicio hice el ejercicio normal, pero quería que tuviera una mejor implementación
+#se le añade recursividad para que el código se vea mas completo
 defmodule Punto2 do
   # Función principal: controla todo el flujo de la reserva de salas
   def main do
@@ -14,7 +16,7 @@ defmodule Punto2 do
       # Caso: sala inexistente
       sillas_disponibles == nil ->
         Util.mostrar_mensaje("Sala inválida, intente nuevamente.\n")
-        main()
+        main()#recursividad
 
       true ->
         # Se pide al usuario la cantidad de sillas a reservar
@@ -24,14 +26,14 @@ defmodule Punto2 do
           # Caso: número de sillas no válido
           cantidad_sillas <= 0 ->
             Util.mostrar_mensaje("El número de sillas debe ser mayor que cero.\n")
-            main()
+            main()#recursividad
 
           # Caso: reserva mayor al número de sillas disponibles
           cantidad_sillas > sillas_disponibles ->
             Util.mostrar_mensaje(
               "No puede reservar más de #{sillas_disponibles} sillas en la sala #{numero_sala}.\n"
             )
-            main()
+            main()#recursividad
 
           # Caso: reserva válida
           true ->
